@@ -1,0 +1,126 @@
+#SentBTN {
+    background-color: #085f79;
+    background: linear-gradient(135deg,#085f79,#bf9d5b);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    border:none;
+    box-shadow: 0 5px 10px;
+}
+
+#SentBTN:hover {
+    background-color:#bf9d5b ;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px;
+}
+
+#userinput{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: none;
+    color:rgb(24, 2, 2);
+    padding: 10px;
+    flex:1;
+    outline: none;
+    resize: none;
+    line-height: 1.5;
+}
+
+#userinput:focus::placeholder{
+    color: #999;
+    transition: color 0.5s ease
+
+
+}
+.topbar{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: #085f79;
+    height: 70px;
+
+}
+.topbar .logo img{
+    height:70px;
+
+}
+
+#chat-container{
+    background-color: rgba(176, 228, 228, 0.432);
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+
+}
+
+.inputarea{
+    display: flex;
+    background-color:  rgba(255, 255, 255, 0.584);
+    bottom: 0;
+    margin-top: 20px;
+    border-radius: 16px;
+    border: none;
+    padding: 14px 16px;
+    
+}
+
+#chatarea{
+    background-color: rgba(255, 255, 255, 0.562);
+    flex-direction: column;
+    display: flex;
+    border-radius: 16px;
+    height: 10vh;
+    border: none;
+    flex: 1;
+    padding: 20px;
+}
+
+.botmessage, .usermessage{
+    
+    padding: 10px;
+    border-radius: 16px;
+    max-width: 60%;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgb(141, 137, 137);
+    word-break: break-word;
+
+
+}
+
+.botmessage {
+    align-self: flex-start;
+    background-color: lightblue;
+
+}
+
+.usermessage {
+    align-self: flex-end;
+    background: linear-gradient(135deg,#06485c,#887041);
+    color: white;
+
+}
+
+@media (max-width: 600px) {
+    #chat-container {
+        padding: 10px;
+    }
+    .inputarea {
+        margin-top: 10px;
+        
+    }
+}
