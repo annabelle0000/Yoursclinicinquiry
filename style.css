@@ -33,12 +33,21 @@
     line-height: 1.5;
 }
 
-#userinput:focus::placeholder{
+#userinput::placeholder{
     color: #999;
     transition: color 0.5s ease
 
 
 }
+
+#userinput:focus::placeholder{
+    color: #ccc;
+    
+
+
+}
+
+
 .topbar{
     top: 0;
     left: 0;
@@ -67,7 +76,7 @@
 
 }
 
-.inputarea{
+#inputarea{
     display: flex;
     background-color:  rgba(255, 255, 255, 0.584);
     bottom: 0;
@@ -76,6 +85,12 @@
     border: none;
     padding: 14px 16px;
     
+}
+
+#inputarea:focus-within {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform:translateY(-2px);
+
 }
 
 #chatarea{
@@ -87,6 +102,24 @@
     border: none;
     flex: 1;
     padding: 20px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+#chatarea::-webkit-scrollbar {
+  width: 6px;
+}
+#chatarea::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+#chatarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+#chatarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .botmessage, .usermessage{
@@ -119,7 +152,7 @@
     #chat-container {
         padding: 10px;
     }
-    .inputarea {
+    #inputarea {
         margin-top: 10px;
         
     }
